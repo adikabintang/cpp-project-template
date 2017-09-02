@@ -4,4 +4,11 @@ This template uses make/ninja as a build tool. However, the Makefile or the ninj
 
 This template is heavily influenced by the template that PlatformIO recommend. However, a small addition are made such as the test and the third_party dir.
 
+To use this program, follow these steps:
+1. Create a "build" folder (mkdir build), then go to that folder (cd build)
+2. Create the Makefile (cmake ..) or the ninja file (cmake .. -G Ninja). Choose only one between them.
+3. Build the code. If you use make: (make -j4), if you use ninja: (ninja). The "-j4" that follows the make command is used to specify the number of cores assigned to compile the program, which is 4 cores. Ninja does not need this because it uses all cores available by default.
+4. Go to the root project folder (cd ..) then go to bin folder (cd bin). Your program is here.
+5. To clean the build files and bin file, simply go to build folder and use "make clean" or "ninja clean".
+ 
 Adika Bintang Sulaeman, 2017
